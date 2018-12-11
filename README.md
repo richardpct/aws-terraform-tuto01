@@ -7,11 +7,11 @@ The example I choose is [the Getting Started with IPv4 for Amazon VPC](https://d
 * You must install terraform
 
 # Usage
-## Exporting the required variables from your terminal:
+## Exporting the required variables in your terminal:
     $ export TF_VAR_region="eu-west-3"
     $ export TF_VAR_ssh_public_key="ssh-rsa ..."
-    $ export TF_VAR_network_remote_state_bucket="example-terraform-state"
-    $ export TF_VAR_network_remote_state_key="example/terraform.tfstate"
+    $ export TF_VAR_network_remote_state_bucket="mybucket-terraform-state"
+    $ export TF_VAR_network_remote_state_key="terraform/terraform.tfstate"
 
 ## Creating the s3 backend to store the terraform state
     $ cd 00-bucket
