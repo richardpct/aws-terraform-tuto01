@@ -13,7 +13,7 @@ The example I choose is [the Getting Started with IPv4 for Amazon VPC](https://d
     $ export TF_VAR_network_remote_state_bucket="mybucket-terraform-state"
     $ export TF_VAR_network_remote_state_key="terraform/terraform.tfstate"
 
-## Creating the s3 backend to store the terraform state
+## Creating the S3 backend to store the terraform state
     $ cd 00-bucket
     $ terraform init
     $ terraform apply
@@ -37,7 +37,7 @@ The last command displays the IP address of your webserver, wait a few seconds t
     $ apt-get upgrade
     $ apt-get install apache2
 
-Then open your web browser with the webserver IP address.
+Then open your web browser with the IP address of your webserver
 
 ## Destroying all resources you have just created
     $ cd ../02-webserver
