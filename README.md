@@ -1,9 +1,9 @@
 # Purpose
-The aim of this tutorial is to show you how to build a simple aws example using Terraform.
+The aim of this tutorial is to show you how to build a simple AWS example using Terraform.
 The example I choose is [the Getting Started with IPv4 for Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/getting-started-ipv4.html?shortFooter=true)
 
 # Requirement
-* You must have an aws account, if you don't have yet, you can subscribe the free tier.
+* You must have an AWS account, if you don't have yet, you can subscribe the free tier.
 * You must install terraform
 
 # Usage
@@ -29,7 +29,7 @@ The example I choose is [the Getting Started with IPv4 for Amazon VPC](https://d
     $ terraform apply
 
 ## Installing apache2
-The last command displays the address IP of your webserver, wait a few seconds then connect to it via ssh:
+The last command displays the IP address of your webserver, wait a few seconds then connect to it via ssh:
 
     $ ssh admin@xx.xx.xx.xx
     $ sudo su -
