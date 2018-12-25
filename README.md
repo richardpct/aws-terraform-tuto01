@@ -3,7 +3,7 @@ The aim of this tutorial is to show you how to build a simple AWS example using 
 The example I choose is [the Getting Started with IPv4 for Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/getting-started-ipv4.html?shortFooter=true)
 
 # Requirement
-* You must have an AWS account, if you don't have yet, you can subscribe the free tier.
+* You must have an AWS account, if you don't have yet, you can subscribe to the free tier.
 * You must install terraform
 
 # Usage
