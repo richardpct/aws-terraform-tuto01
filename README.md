@@ -9,9 +9,10 @@ The example I choose is [the Getting Started with IPv4 for Amazon VPC](https://d
 # Usage
 ## Exporting the required variables in your terminal:
     $ export TF_VAR_region="eu-west-3"
-    $ export TF_VAR_ssh_public_key="ssh-rsa ..."
+    $ export TF_VAR_bucket="mybucket-terraform-state"
     $ export TF_VAR_network_remote_state_bucket="mybucket-terraform-state"
     $ export TF_VAR_network_remote_state_key="terraform/terraform.tfstate"
+    $ export TF_VAR_ssh_public_key="ssh-rsa ..."
 
 ## Creating the S3 backend to store the terraform state
     $ cd 00-bucket
@@ -39,8 +40,10 @@ The last command displays the IP address of your webserver, wait a few seconds t
 
 Then open your web browser with the IP address of your webserver
 
-## Destroying all resources you have just created
+## Cleaning up
     $ cd ../02-webserver
     $ terraform destroy
     $ cd ../01-network
     $ terraform destroy
+
+It isn't needed to clean up 00-bucket, because we will use it in the following tutorials
