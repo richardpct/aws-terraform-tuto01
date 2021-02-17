@@ -1,8 +1,9 @@
 variable "region" {
-  description = "region"
-  default     = "eu-west-3"
+  type        = string
+  description = "Region"
 }
 
 variable "bucket" {
-  description = "bucket"
+  type        = string
+  description = "Bucket"
 }

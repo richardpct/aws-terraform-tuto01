@@ -1,36 +1,39 @@
 # Purpose
-The aim of this tutorial is to show you how to build a simple AWS example using Terraform.
+The aim of this tutorial is to show you how to build a simple AWS example using
+Terraform.
 The example I choose is [the Getting Started with IPv4 for Amazon VPC](https://docs.aws.amazon.com/vpc/latest/userguide/getting-started-ipv4.html?shortFooter=true)
 
-# Requirement
-* You must have an AWS account, if you don't have yet, you can subscribe to the free tier.
+# Requirements
+* You must have an AWS account, if you don't already have it, you can subscribe
+to the free tier
 * You must install terraform
 
 # Usage
-## Exporting the required variables in your terminal:
+## Export the required variables in your terminal:
     $ export TF_VAR_region="eu-west-3"
     $ export TF_VAR_bucket="mybucket-terraform-state"
     $ export TF_VAR_network_remote_state_bucket="mybucket-terraform-state"
     $ export TF_VAR_network_remote_state_key="terraform/terraform.tfstate"
     $ export TF_VAR_ssh_public_key="ssh-rsa ..."
 
-## Creating the S3 backend to store the terraform state
+## Create the S3 backend to store the terraform state
     $ cd 00-bucket
     $ terraform init
     $ terraform apply
 
-## Creating the VPC
+## Create the VPC
     $ cd ../01-network
     $ ./terraform_init.sh (execute this command once)
     $ terraform apply
 
-## Creating the webserver
+## Create the webserver
     $ cd ../02-webserver
     $ ./terraform_init.sh (execute this command once)
     $ terraform apply
 
-## Installing apache2
-The last command displays the IP address of your webserver, wait a few seconds then connect to it via ssh:
+## Install apache2
+The last command displays on the output the IP address of your webserver,
+wait a few seconds then connect into it through SSH:
 
     $ ssh admin@xx.xx.xx.xx
     $ sudo su -
@@ -38,12 +41,13 @@ The last command displays the IP address of your webserver, wait a few seconds t
     $ apt-get upgrade
     $ apt-get install apache2
 
-Then open your web browser with the IP address of your webserver
+Afterwards open your web browser using the IP address of your webserver
 
-## Cleaning up
+## Clean up
     $ cd ../02-webserver
     $ terraform destroy
     $ cd ../01-network
     $ terraform destroy
 
-It isn't needed to clean up 00-bucket, because we will use it in the following tutorials
+It isn't needed to clean up 00-bucket, because we will use it in the following
+tutorials

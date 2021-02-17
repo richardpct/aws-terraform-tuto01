@@ -1,26 +1,32 @@
 variable "region" {
-  description = "region"
+  type        = string
+  description = "Region"
   default     = "eu-west-3"
 }
 
-variable "network_remote_state_bucket" {
-  description = "bucket"
+variable "bucket" {
+  type        = string
+  description = "Bucket"
 }
 
-variable "network_remote_state_key" {
-  description = "network key"
+variable "key_network" {
+  type        = string
+  description = "Network key"
 }
 
 variable "image_id" {
+  type        = string
   description = "image id"
-  default     = "ami-00000f9d1b75a36f8"
+  default     = "ami-0ebc281c20e89ba4b" // Amazon Linux 2018
 }
 
 variable "instance_type" {
+  type        = string
   description = "instance type"
   default     = "t2.micro"
 }
 
 variable "ssh_public_key" {
+  type        = string
   description = "ssh public key"
 }
