@@ -1,20 +1,5 @@
-terraform {
-  backend "s3" {
-  }
-}
-
 provider "aws" {
   region = var.region
-}
-
-data "terraform_remote_state" "network" {
-  backend = "s3"
-
-  config = {
-    bucket = var.bucket
-    key    = var.key_network
-    region = var.region
-  }
 }
 
 resource "aws_key_pair" "deployer" {
