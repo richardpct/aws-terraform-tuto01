@@ -1,9 +1,3 @@
----
-title: "AWS with Terraform tutorial 01"
-date: 2021-02-20T15:11:25Z
-draft: false
----
-
 ## Purpose
 
 I will show you how to build a simple AWS example using Terraform for your
